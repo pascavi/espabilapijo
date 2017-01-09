@@ -90,7 +90,7 @@
           $('.propuestas').css('opacity',1);
           $('.propuestas').show();
 
-          $('.propuestas__loadmore').data('page',1));
+          $('.propuestas__loadmore').data('page',1);
           if($('.propuestas__page:hidden').length==0) $('.propuestas__loadmore').hide();
           else $('.propuestas__loadmore').show();
 
