@@ -20,4 +20,4 @@ theme:
     https://use.fontawesome.com/3bdb074954.js: { type: external }
   css:
     theme:
-       https://fonts.googleapis.com/css?family=Bangers|Ubuntu:400,400i: { type: external }
+       https://fonts.googleapis.com/css?family=Roboto+Mono|Bangers|Ubuntu:400,400i: { type: external }

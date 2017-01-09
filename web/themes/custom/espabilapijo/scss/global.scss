@@ -144,7 +144,7 @@ aside h2{
 @include breakpoint(medium) {
 
   .layout-content {
-    max-width: unset;
+    max-width: none;
   }
 
 }
