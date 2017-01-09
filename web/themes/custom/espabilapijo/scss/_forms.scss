@@ -44,11 +44,30 @@
   width: 100%;
   max-width: none;
   border-radius: 3px;
-  line-height: 40px;
   height:40px;
   padding: 0 10px;
   border: 1px solid #999;
   box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  text-shadow: none;
+  color:#999;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-shadow: none;
+  color:#999;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-shadow: none;
+  color:blue;
+}
+
+:-ms-input-placeholder {
+  text-shadow: none;
+  color:#999;;
 }
 
 .webform-submission-form textarea{

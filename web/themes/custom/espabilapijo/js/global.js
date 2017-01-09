@@ -56,6 +56,7 @@
       });
 
       function getPropuestas() {
+
         $('.propuestas').css('opacity',0.25);
         var keywords = $('.filtrar-propuestas__select').val();
         var url = '/api/propuestas';
@@ -89,6 +90,7 @@
           $('.propuestas').css('opacity',1);
           $('.propuestas').show();
 
+          $('.propuestas__loadmore').data('page',1));
           if($('.propuestas__page:hidden').length==0) $('.propuestas__loadmore').hide();
           else $('.propuestas__loadmore').show();
 
