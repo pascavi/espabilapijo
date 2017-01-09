@@ -85,7 +85,7 @@
           $('.propuestas__pages').empty();
           $('.propuestas__pages').append(pages);
 
-          $('.propuestas__spinner').fadeOut();
+          //$('.propuestas__spinner').fadeOut();
           $('.propuestas').css('opacity',1);
           $('.propuestas').show();
 
