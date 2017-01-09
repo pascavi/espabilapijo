@@ -1,0 +1,14 @@
+{
+  "name": "drupal/custom_espabila",
+  "type": "drupal-module",
+  "description": "Custom Espabila Pijo",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/custom_espabila",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/custom_espabila",
+    "source": "http://cgit.drupalcode.org/custom_espabila"
+  },
+  "require": { }
+}

@@ -1,0 +1,161 @@
+@import 'settings';
+@import 'foundation';
+
+@include foundation-grid;
+@include foundation-visibility-classes;
+@include foundation-button;
+@include foundation-typography;
+
+@import 'glide.core';
+@import 'chosen';
+@import 'header';
+@import 'homepage';
+@import 'slider';
+@import 'forms';
+@import 'propuestas';
+
+body {
+  background: #FFF;
+}
+
+body.path-frontpage {
+  background: #F6F6F6;
+}
+
+main,aside{
+  margin-bottom:2rem;
+}
+
+.column, .columns {
+  box-sizing: border-box;
+
+}
+
+.layout-content {
+  max-width: 530px;
+  margin: 0 auto;
+}
+
+input {
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font1;
+}
+
+.layout-content {
+
+
+  p, li {
+    font-family: $font2;
+    line-height: 1.5em;
+  }
+
+  li {
+    margin-top: 0.75em;
+  }
+
+  ul ul {
+    list-style: circle;
+    margin-bottom: 0.5em;
+  }
+}
+
+.page-node-type-tema .layout-content{
+  h2{
+    font-size:1.7rem;
+    margin-top:2em;
+  }
+
+  h2:first-child{
+    margin-top:0;
+  }
+
+  p, li{
+    font-size:1.1rem;
+  }
+}
+
+
+.button {
+  border-radius: 5px;
+}
+
+.button .fa{
+  position:absolute;
+  top:50%;
+  margin-top:-7px;
+  left:10px;
+}
+
+.button-fa{
+  padding-left:30px;
+  position:relative
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 40px 0 20px;
+  border-top: 5px solid #CCC;
+  color: #666;
+}
+
+.footer span {
+  vertical-align: middle;
+  line-height: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
+.footer a {
+  margin: 0 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+aside h2{
+  font-size:1.4rem;
+  color:#444;
+}
+
+.navigation ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  margin-bottom:30px;
+}
+
+.navigation ul li{
+  margin:0;
+  padding:15px 10px;
+  border-bottom:1px #CCC solid;
+}
+
+.navigation ul li:last-child{
+  border-bottom:none;
+}
+
+.navigation__haz-tu-propuesta{
+  text-align: center;
+}
+
+@include breakpoint(medium) {
+
+  .layout-content {
+    max-width: unset;
+  }
+
+}
+
+@include breakpoint(large) {
+  .navigation{
+    margin-top: 100px;
+    float: right;
+  }
+
+  .rhs-menu__buttons{
+    text-align:center;
+  }
+}

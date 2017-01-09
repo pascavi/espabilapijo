@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme implementation for a 'webform' element.
+ *
+ * This is an copy of the webform.html.twig theme_wrapper which includes the
+ * 'title_prefix' and 'title_suffix' variables needed for
+ * contextual links to appear.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the webform.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_webform()
+ * @see _webform_form_after_build()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<a class="webform-close fa fa-close js-hide-popup "></a>
+<div class="webform-confirmation webform-initially-hidden">
+  <i class="fa fa-check"></i>
+  <p>{{ message }}</p>
+  <div class="webform-confirmation__close"><a class="button secondary js-hide-popup">Cerrar</a></div>
+</div>
+<div class="webform-error webform-initially-hidden">
+  <p>Ups, no se ha podido enviar tu solicitud</p>
+  <div class="webform-confirmation__close"><a class="button secondary js-hide-popup">Cerrar</a></div>
+</div>
+
+<form{{ attributes }}>
+  {{ title_prefix }}
+  {{ children }}
+  {{ title_suffix }}
+</form>

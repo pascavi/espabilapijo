@@ -1,0 +1,136 @@
+
+.overlay {
+  position: fixed;
+  background: #FFF;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:-50px;
+  z-index: 100;
+  transition: opacity 0.3s linear;
+  display: none;
+  overflow: hidden;
+}
+
+.overlay--visible {
+  opacity: 0.6;
+}
+
+.webform-submission-form {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  right:10px;
+  transform: translate(0, -50%);
+  z-index: 101;
+  background: #FFF;
+  padding: 30px;
+  display: none;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.webform-submission-form--visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.webform-submission-form input.form-text,
+.webform-submission-form input.form-email {
+  width: 100%;
+  max-width: none;
+  border-radius: 3px;
+  line-height: 40px;
+  padding: 0 10px;
+  border: 1px solid #999;
+  box-sizing: border-box;
+}
+
+.webform-submission-form textarea{
+  padding:10px;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  border-radius: 3px;
+}
+
+.webform-submission-form label {
+  display: none;
+}
+
+.webform-submission-form .form-submit {
+  margin: 1em 0 0;
+  float: right;
+}
+
+.webform-close.fa{
+  position: absolute;
+  right:20px;
+  top:20px;
+  font-size:1.8rem;
+  color:#CCC;
+}
+
+.webform-initially-hidden{
+  margin-top:30px;
+  display: none;
+}
+
+.webform-confirmation__close{
+  margin-top:40px;
+  text-align:center;
+}
+
+.webform-confirmation p{
+  margin:0 0 0 50px;
+}
+
+.webform-confirmation .fa-check{
+  color:#97D78E;
+  font-size:1.8rem;
+  float:left;
+  margin-left:10px;
+}
+
+.overlay--processing,.webform-submission-form--processing{
+  pointer-events: none;
+}
+
+.webform-submission-form--processing form{
+  opacity:0.5;
+}
+
+.form-textarea-wrapper div{
+  font-size:0.9rem;
+  margin-top:10px;
+}
+
+
+@include breakpoint(medium) {
+
+  .webform-submission-form {
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -100%);
+    width: 90%;
+    max-width: 500px;
+
+  }
+
+  .webform-submission-form--visible {
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+
+@include breakpoint(large) {
+
+}

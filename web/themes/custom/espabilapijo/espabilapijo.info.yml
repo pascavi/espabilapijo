@@ -1,0 +1,19 @@
+name: espabilapijo
+description: Espabila Pijo!.
+base theme: classy
+package: Custom
+type: theme
+version: 1.0
+core: 8.x
+libraries:
+  - espabilapijo/theme
+  - espabilapijo/base
+regions:
+  header: 'Header'
+  content: 'Main content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+
+favicon:
+  use_default: 1
+  path: 'favicon.ico'

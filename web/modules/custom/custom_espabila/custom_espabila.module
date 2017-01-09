@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_espabila.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+ * Implements hook_help().
+ */
+function custom_espabila_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_espabila module.
+    case 'help.page.custom_espabila':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom Espabila Pijo') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/*
+ * Implements hook_views_post_execute().
+ */
+function custom_espabila_views_post_execute($view) {
+  // For this view shuffle our $view->result.
+  if ($view->current_display == 'api' && empty(\Drupal::request()->query->get('query'))) {
+    shuffle($view->result);
+  }
+}
+
