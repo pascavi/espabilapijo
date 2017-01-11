@@ -31,7 +31,8 @@
         "drupal/search_api": "1.x@dev",
         "drupal/webform": "@dev",
 		"drupal/console": "^1.0",
-        "drupal/metatag": "@dev"			
+        "drupal/metatag": "@dev",
+        "drupal/smtp": "@dev"			
 	
     },
     "require-dev": {
