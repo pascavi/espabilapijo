@@ -28,8 +28,8 @@ main,aside{
 
 .column, .columns {
   box-sizing: border-box;
-
 }
+
 
 .layout-content {
   max-width: 530px;
@@ -141,6 +141,21 @@ aside h2{
   text-align: center;
 }
 
+.youtube-container{
+  position:relative;
+  height:0;
+  width:100%;
+  padding-bottom:60%;
+}
+
+.youtube-container iframe{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
 @include breakpoint(medium) {
 
   .layout-content {
@@ -158,4 +173,9 @@ aside h2{
   .rhs-menu__buttons{
     text-align:center;
   }
+
+  .clear-for-large{
+    clear:left!important;
+  }
+
 }

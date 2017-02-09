@@ -70,130 +70,138 @@
  *   in different view modes.
  */
 #}
-{%
-  set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
+{% set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+node.isPromoted() ? 'node--promoted',
+node.isSticky() ? 'node--sticky',
+not node.isPublished() ? 'node--unpublished',
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-  <div class="intro row">
-    <div class="column medium-7">
-      <h2>Estamos trazando un plan maestro</h2>
-    </div>
-    <div class="column medium-17">
-      <p>¿Te quejas de que en Molina no hay nada que hacer? ¿Tienes ideas de cosas que podrían cambiar o mejorarse?
-        Jóvenes de Molina nos juntamos en esta iniciativa para reunir propuestas para un Plan Joven. Necesitamos&nbsp;tus&nbsp;ideas.</p>
-    </div>
-  </div>
-
-  <div class="row comic">
-    <div class="column medium-12 large-8">
-      <div class="comic__box comic__box--has-button">
-        <img src="/{{ base_path ~ directory }}/images/fechas.png">
-        <p>A las 20:30h en <a href="https://goo.gl/maps/W5Ce5vbkgM42" target="_blank">La Nueva 19</a>, volvemos, para hablar de cuándo tendrás trabajo y casa, de una Molina sostenible y con oferta de ocio.</p>
-        <a href="https://www.facebook.com/espabilapijo/" target="_blank" class="button comic__button secondary" >Difunde</a>
-      </div>
+    <div class="intro row">
+        <div class="column medium-7">
+            <h2>Estamos trazando un plan maestro</h2>
+        </div>
+        <div class="column medium-17">
+            <p>¿Te quejas de que en Molina no hay nada que hacer? ¿Tienes ideas de cosas que podrían cambiar o mejorarse?
+                Jóvenes de Molina nos juntamos en esta iniciativa para reunir propuestas para un Plan Joven. Necesitamos&nbsp;tus&nbsp;ideas.</p>
+        </div>
     </div>
 
-    <div class="column medium-12 large-8">
-      <div class="comic__box comic__box--green comic__box--has-button">
-        <img class="comic__circle" src="/{{ base_path ~ directory }}/images/cerebros.svg">
-        <h3>Exprimimos cerebros</h3>
-        <p>¿Hay alguien ahí fuera? Queremos escuchar ideas, intereses, propuestas... y por qué no, llevarlas a
-          cabo.</p>
-        <a href="javascript:void(0)" class="button comic__button secondary js-show-popup" data-form="block-tu-propuesta">Deja tu propuesta</a>
-      </div>
-    </div>
+    <div class="row comic">
+        <div class="column medium-12 large-8">
+            <div class="comic__box comic__box--has-button">
+                <div class="youtube-container">
+                <iframe src="https://www.youtube.com/embed/1_6Tl4hawWM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Jueves 16 Feb, 20.30 en la  <a href="https://goo.gl/maps/W5Ce5vbkgM42" target="_blank">La Nueva 19</a> nos juntamos para hablar de qué cambiar en Molina para que tengas casa y curro antes de los 40.</p>
+                <a href="https://goo.gl/maps/W5Ce5vbkgM42" class="button comic__button secondary" data-form="block-unete-al-grupo">¿Ande?</a>
+            </div>
+        </div>
+
+        <div class="column medium-12 large-8">
+            <div class="comic__box comic__box--has-button">
+                <img src="/{{ base_path ~ directory }}/images/fechas.png">
+                <p>Espabila Pijo Returns. Apunta las fechas, te esperamos para que nos cuéntes de cómo encontrar trabajo y casa, y de cómo conseguir una Molina sostenible y con oferta de ocio.</p>
+                <a href="/{{ base_path ~ directory }}/images/returns.png" target="_blank" class="button comic__button secondary">Difunde</a>
+            </div>
+        </div>
+
+        <div class="column medium-12 large-8">
+            <div class="comic__box comic__box--green comic__box--has-button">
+                <img class="comic__circle" src="/{{ base_path ~ directory }}/images/cerebros.svg">
+                <h3>Exprimimos cerebros</h3>
+                <p>¿Hay alguien ahí fuera? Queremos escuchar ideas, intereses, propuestas... y por qué no, llevarlas a
+                    cabo.</p>
+                <a href="javascript:void(0)" class="button comic__button secondary js-show-popup" data-form="block-tu-propuesta">Deja tu propuesta</a>
+            </div>
+        </div>
 
 
-    <div class="column medium-12 large-8">
-      <div class="comic__box comic__box--has-button">
-        <img src="/{{ base_path ~ directory }}/images/lanueva.jpg">
-        <p>Un grupo promotor nos juntamos una vez al mes en <a href="https://goo.gl/maps/W5Ce5vbkgM42" target="_blank">La Nueva 19</a> para conspirar y organizar
-          esta iniciativa.</p>
-        <a href="javascript:void(0)" class="button comic__button secondary js-show-popup" data-form="block-unete-al-grupo">Únete al Grupo</a>
-      </div>
-    </div>
-<!--
-    <div class="column medium-12 large-8">
-      <div class="comic__box comic__box--has-button">
-        <img src="/{{ base_path ~ directory }}/images/net.png">
-        <p>Síguenos en nuestra página de <a href="">Facebook</a>. ¿Nos echas una mano? Descárgate este <a
-            href="">flyer</a> y compártelo en tus redes sociales.</p>
-        <a href="/{{ base_path ~ directory }}/images/flyer.png" target="_blank" class="button comic__button secondary">Flyer para redes sociales</a>
-      </div>
-    </div>
-    -->
 
-    <div class="column medium-12 large-12 clear-for-large">
-      <div class="comic__box comic__box--blue comic__box--has-button">
-        <!--
+        <div class="column medium-12 large-12 clear-for-large">
+            <div class="comic__box comic__box--blue comic__box--has-button">
+                <!--
             <img class="comic__circle" src="{{ base_path ~ directory }}/images/cerebros.svg">
             <h3>Exprimimos cerebros</h3>
             <p>¿Hay alguien ahí fuera?  Queremos escuchar ideas, intereses, propuestas... y por qué no, llevarlas a cabo.</p>
             -->
-        <h3>Propuestas</h3>
-        <div id="propuestas">
-          <div class="glide">
-            <div class="glide__wrapper">
-              <ul class="glide__track">
+                <h3>Propuestas</h3>
+                <div id="propuestas">
+                    <div class="glide">
+                        <div class="glide__wrapper">
+                            <ul class="glide__track">
 
-              </ul>
-            </div>
-            <div class="glide__arrows test">
-              <a class="glide__arrow prev fa fa-chevron-left" data-glide-dir="<"></a>
-              <a class="glide__arrow next fa fa-chevron-right" data-glide-dir=">"></a>
-            </div>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows test">
+                            <a class="glide__arrow prev fa fa-chevron-left" data-glide-dir="<"></a>
+                            <a class="glide__arrow next fa fa-chevron-right" data-glide-dir=">"></a>
+                        </div>
 
-          </div>
+                    </div>
+                </div>
+                <a href="/propuestas" class="button comic__button secondary">Explorador de Propuestas</a>
+            </div>
         </div>
-        <a href="/propuestas" class="button comic__button secondary">Explorador de Propuestas</a>
-      </div>
+
+        <div class="column medium-12 large-12">
+            <div class="comic__box comic__box--yellow comic__box--julio">
+
+
+            </div>
+
+        </div>
+
+        <div class="column medium-12 large-8">
+            <div class="comic__box comic__box--yellow">
+                <h3>Bloques de propuestas</h3>
+                <ul>
+                    <li><a href="/cultura" class="button">Cultura</a></li>
+                    <li><a href="/ocio-y-deporte" class="button">Ocio y deporte</a></li>
+                    <li><a href="/movilidad" class="button">Movilidad</a></li>
+                    <li><a href="/vivienda-y-empleo" class="button">Vivienda y empleo</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="column medium-12 large-8">
+            <div class="comic__box comic__box--has-button">
+                <img src="/{{ base_path ~ directory }}/images/lanueva.jpg">
+                <p>Un grupo promotor nos juntamos una vez al mes en <a href="https://goo.gl/maps/W5Ce5vbkgM42" target="_blank">La Nueva 19</a> para conspirar y organizar
+                    esta iniciativa.</p>
+                <a href="javascript:void(0)" class="button comic__button secondary js-show-popup" data-form="block-unete-al-grupo">Únete al Grupo</a>
+            </div>
+        </div>
+
+        <div class="column medium-12 large-8">
+            <div class="comic__box comic__box--with-video">
+                <video width="400" height="400" autoplay loop muted>
+                    <source src="/{{ base_path ~ directory }}/images/triller.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+
+        <div class="column medium-12 large-8 clear-for-large">
+            <div class="comic__box comic__box--has-button">
+                <img src="/{{ base_path ~ directory }}/images/coy.jpg">
+                <p>Noviembre 2016. El grupo promotor se concentra en el albergue de Coy para planificar las siguientes acciones de Espabila Pijo! </p>
+                <a href="https://youtu.be/D60T7NPr9w0" target="_blank" class="button comic__button secondary">Dentro vídeo</a>
+            </div>
+        </div>
+
+        <div class="column medium-12 large-8 end">
+            <div class="comic__box comic__box--has-button">
+                <img src="/{{ base_path ~ directory }}/images/net.png">
+                <p>Síguenos en nuestra página de <a href="">Facebook</a>. ¿Nos echas una mano? Descárgate este <a
+                            href="">flyer</a> y compártelo en tus redes sociales.</p>
+                <a href="/{{ base_path ~ directory }}/images/flyer.png" target="_blank" class="button comic__button secondary">Flyer para redes sociales</a>
+            </div>
+        </div>
+
     </div>
-
-    <div class="column medium-12 large-12">
-      <div class="comic__box comic__box--yellow comic__box--julio">
-
-
-      </div>
-
-    </div>
-
-    <div class="column medium-12 large-8">
-      <div class="comic__box comic__box--yellow">
-        <h3>Bloques de propuestas</h3>
-        <ul>
-          <li><a href="/cultura" class="button">Cultura</a></li>
-          <li><a href="/ocio-y-deporte" class="button">Ocio y deporte</a></li>
-          <li><a href="/movilidad" class="button">Movilidad</a></li>
-          <li><a href="/vivienda-y-empleo" class="button">Vivienda y empleo</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="column medium-12 large-8">
-      <div class="comic__box comic__box--has-button">
-        <img src="/{{  base_path ~ directory }}/images/coy.jpg">
-        <p>Noviembre 2016. El grupo promotor se concentra en el albergue de Coy para planificar las siguientes acciones de Espabila Pijo! </p>
-        <a href="https://youtu.be/D60T7NPr9w0" target="_blank" class="button comic__button secondary">Dentro vídeo</a>
-      </div>
-    </div>
-
-    <div class="column medium-12 large-8">
-      <div class="comic__box comic__box--width-video">
-        <video width="400" height="400" autoplay loop muted>
-          <source src="/{{ base_path ~ directory }}/images/triller.mp4" type="video/mp4"/>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-
-
-  </div>
 </article>
